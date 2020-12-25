@@ -4,6 +4,7 @@ import com.repairz.repzimpl.DAO.OrderDao;
 //import com.repairz.repzimpl.DAO.OrderDaoImpl;
 import com.repairz.repzimpl.Model.Order;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -14,7 +15,7 @@ import java.util.UUID;
 public class repairzService {
     private OrderDao obj;
     @Autowired
-    repairzService(OrderDao obj)
+    repairzService(@Qualifier("fake") OrderDao obj)
     {
         this.obj=obj;
     }

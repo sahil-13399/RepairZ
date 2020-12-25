@@ -8,7 +8,7 @@ import java.util.HashMap;
 //import java.util.List;
 import java.util.UUID;
 
-@Repository
+@Repository("fake")
 public class OrderDaoImpl implements OrderDao{
     private final HashMap<UUID,Order> map;
     OrderDaoImpl(){
