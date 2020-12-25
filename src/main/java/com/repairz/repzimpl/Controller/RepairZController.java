@@ -21,13 +21,17 @@ public class RepairZController {
     {   //UUID order_id=new UUID();
         UUID order_id=UUID.randomUUID();
         order.setOrder_id(order_id);
-        order.toString();
+        System.out.println(order.toString());
         obj.registerOrder(order_id,order);
     }
     @GetMapping(path = "/")
-    public ArrayList<Order> geOrders()
+    public ArrayList<Order> getOrders()
     {
         ArrayList<Order> list=obj.getOrders();
         return list;
+    }
+    @GetMapping(path = "/{order_id}")
+    public Order getOrder(@PathVariable("order_id") UUID order_id){
+        return obj.getOrder(order_id);
     }
 }
