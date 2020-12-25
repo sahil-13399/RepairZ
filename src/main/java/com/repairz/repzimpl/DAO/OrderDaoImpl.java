@@ -38,7 +38,11 @@ public class OrderDaoImpl implements OrderDao{
 
     @Override
     public Order getOrder(UUID order_id) {
-        return null;
+        Order order = null;
+        if(map.containsKey(order_id)) {
+            order = map.get(order_id);
+        }
+        return order;
     }
 
     @Override
