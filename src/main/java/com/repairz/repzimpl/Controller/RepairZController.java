@@ -19,11 +19,15 @@ public class RepairZController {
     @PostMapping(path = "/addOrder")
     public void addOrders(@RequestBody Order order)
     {   //UUID order_id=new UUID();
-        obj.registerOrder(UUID.randomUUID(),order);
+        UUID order_id=UUID.randomUUID();
+        order.setOrder_id(order_id);
+        order.toString();
+        obj.registerOrder(order_id,order);
     }
     @GetMapping(path = "/")
-    public void geOrders()
+    public ArrayList<Order> geOrders()
     {
         ArrayList<Order> list=obj.getOrders();
+        return list;
     }
 }

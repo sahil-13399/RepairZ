@@ -9,8 +9,7 @@ public class Order {
     private String car_name;
     private String repair_desc;
 
-    public Order(UUID order_id, String email_id, String password, String car_name, String repair_desc) {
-        this.order_id = order_id;
+    public Order(String email_id, String password, String car_name, String repair_desc) {
         this.email_id = email_id;
         this.password = password;
         this.car_name = car_name;
@@ -55,5 +54,16 @@ public class Order {
 
     public void setRepair_desc(String repair_desc) {
         this.repair_desc = repair_desc;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "order_id=" + order_id +
+                ", email_id='" + email_id + '\'' +
+                ", password='" + password + '\'' +
+                ", car_name='" + car_name + '\'' +
+                ", repair_desc='" + repair_desc + '\'' +
+                '}';
     }
 }

@@ -50,6 +50,7 @@ public class OrderDaoImpl implements OrderDao{
         ArrayList<Order> list=new ArrayList<>();
         for(UUID x:map.keySet())
         {
+            System.out.println(map.get(x).toString());
             list.add(map.get(x));
         }
         return list;
