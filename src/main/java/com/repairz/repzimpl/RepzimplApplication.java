@@ -8,7 +8,7 @@ public class RepzimplApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(RepzimplApplication.class, args);
-        System.out.println("Hello World");
+        //System.out.println("Hello World");
     }
 
 }
