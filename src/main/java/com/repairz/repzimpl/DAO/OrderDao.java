@@ -2,6 +2,7 @@ package com.repairz.repzimpl.DAO;
 
 import com.repairz.repzimpl.Model.Order;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -10,5 +11,5 @@ public interface OrderDao {
     int updateOrder(UUID order_id,Order order);
     int deleteOrder(UUID order_id);
     Order getOrder(UUID order_id);
-    List<Order> getOrders();
+    ArrayList<Order> getOrders();
 }

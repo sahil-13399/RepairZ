@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
+//import java.util.List;
 import java.util.UUID;
 
 @Repository
@@ -46,7 +46,7 @@ public class OrderDaoImpl implements OrderDao{
     }
 
     @Override
-    public List<Order> getOrders() {
+    public ArrayList<Order> getOrders() {
         ArrayList<Order> list=new ArrayList<>();
         for(UUID x:map.keySet())
         {

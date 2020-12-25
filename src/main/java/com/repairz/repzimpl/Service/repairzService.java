@@ -1,7 +1,7 @@
 package com.repairz.repzimpl.Service;
 
 import com.repairz.repzimpl.DAO.OrderDao;
-import com.repairz.repzimpl.DAO.OrderDaoImpl;
+//import com.repairz.repzimpl.DAO.OrderDaoImpl;
 import com.repairz.repzimpl.Model.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -17,31 +17,28 @@ public class repairzService {
         this.obj=obj;
     }
     public int registerOrder(UUID order_id, Order order) {
-
+        obj.registerOrder(order_id,order);
         return 1;
     }
 
     public int updateOrder(UUID order_id,Order order) {
-
+        obj.updateOrder(order_id,order);
         return 1;
     }
 
 
     public int deleteOrder(UUID order_id) {
-        map.remove(order_id);
+       obj.deleteOrder(order_id);
         return 0;
     }
 
     public Order getOrder(UUID order_id) {
-        return null;
+        Order order=obj.getOrder(order_id);
+        return order;
     }
 
-    public List<Order> getOrders() {
-        ArrayList<Order> list=new ArrayList<>();
-        for(UUID x:map.keySet())
-        {
-            list.add(map.get(x));
-        }
+    public ArrayList<Order> getOrders() {
+        ArrayList list=obj.getOrders();
         return list;
     }
 }
