@@ -9,6 +9,14 @@ public class Order {
     private String car_name;
     private String repair_desc;
 
+    public Order(UUID order_id, String email_id, String password, String car_name, String repair_desc) {
+        this.order_id = order_id;
+        this.email_id = email_id;
+        this.password = password;
+        this.car_name = car_name;
+        this.repair_desc = repair_desc;
+    }
+
     public UUID getOrder_id() {
         return order_id;
     }

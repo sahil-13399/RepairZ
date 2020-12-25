@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.UUID;
 
 public class repairzService {
-    OrderDao obj;
+    private OrderDao obj;
     @Autowired
     repairzService(OrderDao obj)
     {
