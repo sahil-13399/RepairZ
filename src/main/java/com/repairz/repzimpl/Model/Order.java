@@ -1,4 +1,4 @@
-package Model;
+package com.repairz.repzimpl.Model;
 
 import java.util.UUID;
 
