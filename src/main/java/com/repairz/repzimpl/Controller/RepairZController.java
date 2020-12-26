@@ -34,4 +34,15 @@ public class RepairZController {
     public Order getOrder(@PathVariable("order_id") UUID order_id){
         return obj.getOrder(order_id);
     }
+    @PutMapping(path = "/updateOrder/{order_id}")
+    public void updateOrder(@PathVariable("order_id") UUID order_id,@RequestBody Order order)
+        {
+            order.setOrder_id(order_id);
+            obj.updateOrder(order_id,order);
+        }
+    @DeleteMapping(path="/deleteOrder/{order_id}")
+    public void deleteOrder(@PathVariable("order_id") UUID order_id)
+        {
+            obj.deleteOrder(order_id);
+        }
 }
